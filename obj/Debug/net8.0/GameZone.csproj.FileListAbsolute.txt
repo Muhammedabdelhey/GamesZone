@@ -417,3 +417,5 @@ D:\Dot Net Projects\GamesZone\obj\Debug\net8.0\GameZone.pdb
 D:\Dot Net Projects\GamesZone\obj\Debug\net8.0\GameZone.genruntimeconfig.cache
 D:\Dot Net Projects\GamesZone\obj\Debug\net8.0\ref\GameZone.dll
 D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\libman.json
+D:\Abdelhay projects\GameZone\bin\Debug\net8.0\libman.json
+D:\Abdelhay projects\GameZone\obj\Debug\net8.0\GameZone.sourcelink.json

@@ -7,7 +7,7 @@
 namespace GameZone.Migrations
 {
     /// <inheritdoc />
-    public partial class inital_database : Migration
+    public partial class intialdatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
