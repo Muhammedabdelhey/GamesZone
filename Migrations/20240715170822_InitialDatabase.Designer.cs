@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameZone.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240714094848_intial-database")]
-    partial class intialdatabase
+    [Migration("20240715170822_InitialDatabase")]
+    partial class InitialDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,21 +23,6 @@ namespace GameZone.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("GamePlatform", b =>
-                {
-                    b.Property<int>("GamesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PlatformsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("GamesId", "PlatformsId");
-
-                    b.HasIndex("PlatformsId");
-
-                    b.ToTable("GamePlatform");
-                });
 
             modelBuilder.Entity("GameZone.Models.Category", b =>
                 {
@@ -112,6 +97,21 @@ namespace GameZone.Migrations
                     b.ToTable("games");
                 });
 
+            modelBuilder.Entity("GameZone.Models.GamePlatform", b =>
+                {
+                    b.Property<int>("GameId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PlatformId")
+                        .HasColumnType("int");
+
+                    b.HasKey("GameId", "PlatformId");
+
+                    b.HasIndex("PlatformId");
+
+                    b.ToTable("gamesplatforms");
+                });
+
             modelBuilder.Entity("GameZone.Models.Platform", b =>
                 {
                     b.Property<int>("Id")
@@ -155,21 +155,6 @@ namespace GameZone.Migrations
                         });
                 });
 
-            modelBuilder.Entity("GamePlatform", b =>
-                {
-                    b.HasOne("GameZone.Models.Game", null)
-                        .WithMany()
-                        .HasForeignKey("GamesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("GameZone.Models.Platform", null)
-                        .WithMany()
-                        .HasForeignKey("PlatformsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("GameZone.Models.Game", b =>
                 {
                     b.HasOne("GameZone.Models.Category", "Category")
@@ -181,9 +166,34 @@ namespace GameZone.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("GameZone.Models.GamePlatform", b =>
+                {
+                    b.HasOne("GameZone.Models.Game", null)
+                        .WithMany("GamePlatforms")
+                        .HasForeignKey("GameId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GameZone.Models.Platform", null)
+                        .WithMany("PlatformGames")
+                        .HasForeignKey("PlatformId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("GameZone.Models.Category", b =>
                 {
                     b.Navigation("Games");
+                });
+
+            modelBuilder.Entity("GameZone.Models.Game", b =>
+                {
+                    b.Navigation("GamePlatforms");
+                });
+
+            modelBuilder.Entity("GameZone.Models.Platform", b =>
+                {
+                    b.Navigation("PlatformGames");
                 });
 #pragma warning restore 612, 618
         }

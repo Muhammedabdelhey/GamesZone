@@ -276,8 +276,11 @@ D:\Abdelhay projects\GameZone\obj\Debug\net8.0\refint\GameZone.dll
 D:\Abdelhay projects\GameZone\obj\Debug\net8.0\GameZone.pdb
 D:\Abdelhay projects\GameZone\obj\Debug\net8.0\GameZone.genruntimeconfig.cache
 D:\Abdelhay projects\GameZone\obj\Debug\net8.0\ref\GameZone.dll
+D:\Abdelhay projects\GameZone\bin\Debug\net8.0\libman.json
+D:\Abdelhay projects\GameZone\obj\Debug\net8.0\GameZone.sourcelink.json
 D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\appsettings.Development.json
 D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\appsettings.json
+D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\libman.json
 D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\GameZone.staticwebassets.runtime.json
 D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\GameZone.exe
 D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\GameZone.deps.json
@@ -325,7 +328,6 @@ D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\System.Memory.Data.dll
 D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\System.Runtime.Caching.dll
 D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\System.Security.Permissions.dll
-D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\System.Text.Json.dll
 D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\System.Windows.Extensions.dll
 D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -416,6 +418,3 @@ D:\Dot Net Projects\GamesZone\obj\Debug\net8.0\refint\GameZone.dll
 D:\Dot Net Projects\GamesZone\obj\Debug\net8.0\GameZone.pdb
 D:\Dot Net Projects\GamesZone\obj\Debug\net8.0\GameZone.genruntimeconfig.cache
 D:\Dot Net Projects\GamesZone\obj\Debug\net8.0\ref\GameZone.dll
-D:\Dot Net Projects\GamesZone\bin\Debug\net8.0\libman.json
-D:\Abdelhay projects\GameZone\bin\Debug\net8.0\libman.json
-D:\Abdelhay projects\GameZone\obj\Debug\net8.0\GameZone.sourcelink.json

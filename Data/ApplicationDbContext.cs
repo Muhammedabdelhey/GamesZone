@@ -30,6 +30,11 @@ namespace GameZone.Data
 
 
                 ]);
+            modelBuilder.Entity<Game>()
+                .HasMany(g => g.Platforms)
+                .WithMany(g => g.Games)
+                .UsingEntity<GamePlatform>();
+
             base.OnModelCreating(modelBuilder);
         }
     }

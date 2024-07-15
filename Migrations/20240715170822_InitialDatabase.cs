@@ -7,7 +7,7 @@
 namespace GameZone.Migrations
 {
     /// <inheritdoc />
-    public partial class intialdatabase : Migration
+    public partial class InitialDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -62,24 +62,24 @@ namespace GameZone.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "GamePlatform",
+                name: "gamesplatforms",
                 columns: table => new
                 {
-                    GamesId = table.Column<int>(type: "int", nullable: false),
-                    PlatformsId = table.Column<int>(type: "int", nullable: false)
+                    GameId = table.Column<int>(type: "int", nullable: false),
+                    PlatformId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_GamePlatform", x => new { x.GamesId, x.PlatformsId });
+                    table.PrimaryKey("PK_gamesplatforms", x => new { x.GameId, x.PlatformId });
                     table.ForeignKey(
-                        name: "FK_GamePlatform_games_GamesId",
-                        column: x => x.GamesId,
+                        name: "FK_gamesplatforms_games_GameId",
+                        column: x => x.GameId,
                         principalTable: "games",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_GamePlatform_platforms_PlatformsId",
-                        column: x => x.PlatformsId,
+                        name: "FK_gamesplatforms_platforms_PlatformId",
+                        column: x => x.PlatformId,
                         principalTable: "platforms",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -107,21 +107,21 @@ namespace GameZone.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_GamePlatform_PlatformsId",
-                table: "GamePlatform",
-                column: "PlatformsId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_games_CategoryId",
                 table: "games",
                 column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_gamesplatforms_PlatformId",
+                table: "gamesplatforms",
+                column: "PlatformId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "GamePlatform");
+                name: "gamesplatforms");
 
             migrationBuilder.DropTable(
                 name: "games");

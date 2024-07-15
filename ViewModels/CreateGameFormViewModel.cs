@@ -1,6 +1,6 @@
 ﻿namespace GameZone.ViewModels
 {
-    public class CraeteGameFormViewModel
+    public class CreateGameFormViewModel
     {
         [MaxLength(250)]
         public string Name { get; set; } = string.Empty;
@@ -8,10 +8,10 @@
         [Display(Name = "Category")]
         public int CategoryId { get; set; }
         public IEnumerable<SelectListItem> Platforms { get; set; } = Enumerable.Empty<SelectListItem>();
-        [Display(Name="Supported Platforms")]
-        public List<int> SelectdPlatforms { get; set; } = new List<int>();
+        [Display(Name = "Supported Platforms")]
+        public List<int> SelectdPlatforms { get; set; } = default!;
         public string Description { get; set; } = string.Empty;
-        public IFormFile Cover { get; set; }
+        public IFormFile Cover { get; set; } = default!;
 
     }
 }

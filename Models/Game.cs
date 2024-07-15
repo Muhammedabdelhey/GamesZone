@@ -9,7 +9,8 @@
         public string Cover { get; set; } = string.Empty;
         public int CategoryId { get; set; }
         [ForeignKey(nameof(CategoryId))]
-        public virtual required Category Category { get; set; }
+        public virtual Category Category { get; set; } = default!;
         public virtual ICollection<Platform> Platforms { get; set; } = new List<Platform>();
+        public virtual ICollection<GamePlatform> GamePlatforms { get; set; } = new List<GamePlatform>();
     }
 }
