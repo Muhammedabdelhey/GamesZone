@@ -17,7 +17,7 @@
             <div class="form-group">
                 <label asp-for="CategoryId" class="form-label mt-2"></label>
                 <select class="form-select" asp-for="CategoryId" asp-items="Model.Categories">
-                    <option>Select Category</option>
+                    <option value="">Select Category</option>
                 </select>
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
@@ -35,14 +35,26 @@
             </div>
             <div class="form-group">
                 <label asp-for="Cover" class="form-label mt-2"></label>
-                <input type="file" class="form-control" asp-for="Cover" placeholder="Game Cover">
-                <small class="form-text text-muted d-block">Only .jpg, .jpeg, .png files are allowed with max size 1MB</small>
+                <input type="file" class="form-control" asp-for="Cover"
+                       data-rule-extension="@ImageSettings.AllowedExtensions.Replace(".",string.Empty)"
+                       data-msg-extension="Not Allowed Extension">
+                <small class="form-text text-muted d-block">Only @ImageSettings.AllowedExtensions files are allowed with max size @ImageSettings.MaxSizeInMBs MB</small>
                 <span asp-validation-for="Cover" class="text-danger"></span>
             </div>
             <button type="submit" class="btn btn-light text-black mt-4">Add Game</button>
         </div>
-        <div class="col-md-6">
-
+        <div class="col-md-6 d-flex justify-content-center pt-4 overflow-hidden">
+            <img class="cover-preview d-none " alt="cover" />
         </div>
     </div>
 </form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function () {
+            $('#Cover').on('change', function () {
+                $('.cover-preview').attr('src', window.URL.createObjectURL(this.files[0])).removeClass('d-none')
+            })
+        });
+    </script>
+}

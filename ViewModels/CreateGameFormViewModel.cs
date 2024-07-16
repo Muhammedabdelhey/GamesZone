@@ -1,4 +1,6 @@
-﻿namespace GameZone.ViewModels
+﻿using System.Runtime.CompilerServices;
+
+namespace GameZone.ViewModels
 {
     public class CreateGameFormViewModel
     {
@@ -11,6 +13,8 @@
         [Display(Name = "Supported Platforms")]
         public List<int> SelectdPlatforms { get; set; } = default!;
         public string Description { get; set; } = string.Empty;
+
+        [AllowedExtensions, MaxFileSize]
         public IFormFile Cover { get; set; } = default!;
 
     }

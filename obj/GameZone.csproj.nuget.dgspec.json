@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dot Net Projects\\GamesZone\\GameZone.csproj": {}
+    "D:\\Abdelhay projects\\GameZone\\GameZone.csproj": {}
   },
   "projects": {
-    "D:\\Dot Net Projects\\GamesZone\\GameZone.csproj": {
+    "D:\\Abdelhay projects\\GameZone\\GameZone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dot Net Projects\\GamesZone\\GameZone.csproj",
+        "projectUniqueName": "D:\\Abdelhay projects\\GameZone\\GameZone.csproj",
         "projectName": "GameZone",
-        "projectPath": "D:\\Dot Net Projects\\GamesZone\\GameZone.csproj",
-        "packagesPath": "C:\\Users\\myoss\\.nuget\\packages\\",
-        "outputPath": "D:\\Dot Net Projects\\GamesZone\\obj\\",
+        "projectPath": "D:\\Abdelhay projects\\GameZone\\GameZone.csproj",
+        "packagesPath": "C:\\Users\\Ticket-PC1\\.nuget\\packages\\",
+        "outputPath": "D:\\Abdelhay projects\\GameZone\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\myoss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ticket-PC1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,8 +26,7 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
