@@ -12,7 +12,7 @@ namespace GameZone.Services
         {
             _context = context;
             _webHostEnvironment = webHostEnvironment;
-            _imagesPath = $"{_webHostEnvironment.WebRootPath}{ImageSettings.ImagesPath}/games";
+            _imagesPath = $"{_webHostEnvironment.WebRootPath}{ImageSettings.ImagesPath}";
         }
         public async Task CreateAsync(CreateGameFormViewModel model)
         {
@@ -30,8 +30,17 @@ namespace GameZone.Services
                 .Select(p => new GamePlatform { PlatformId = p })
                 .ToList(),
             };
-            _context.games.Add(game);
+            _context.Games.Add(game);
             _context.SaveChanges();
+        }
+
+        public async Task<IEnumerable<Game>> GetAllAsync()
+        {
+            return await _context.Games
+                .AsNoTracking()
+                .Include(x => x.Category)
+                .Include(x => x.Platforms)
+                .ToListAsync();
         }
     }
 }

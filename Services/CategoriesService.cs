@@ -12,7 +12,7 @@ namespace GameZone.Services
         }
         public async Task<IEnumerable<SelectListItem>> GetCategoriesForDropDownAsync()
         {
-            return await _context.categories
+            return await _context.Categories
                 .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
                 .OrderBy(c => c.Text)
                 .AsNoTracking()

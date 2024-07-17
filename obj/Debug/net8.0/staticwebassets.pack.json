@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\GameZone.bundle.scp.css"
     },
     {
-      "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\assests\\images\\games\\62d81564-8205-4f56-bc73-7ab468cf2eab.ico",
-      "PackagePath": "staticwebassets\\assests\\images\\games\\62d81564-8205-4f56-bc73-7ab468cf2eab.ico"
-    },
-    {
       "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\assests\\images\\games\\ae26d1e3-4f95-48ca-917d-2726c8e6b634.jpg",
       "PackagePath": "staticwebassets\\assests\\images\\games\\ae26d1e3-4f95-48ca-917d-2726c8e6b634.jpg"
     },
@@ -23,6 +19,10 @@
     {
       "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\js\\gameform.js",
+      "PackagePath": "staticwebassets\\js\\gameform.js"
     },
     {
       "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\js\\site.js",

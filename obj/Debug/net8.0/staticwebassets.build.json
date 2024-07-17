@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ec+TiNsBlyhP7pKHaBSjxWffviaLnicpfgiXn+gu+MQ=",
+  "Hash": "TTL3zmh3P/wSzwsoPbmdk5Ja0MQe3oDKpx1ZxiofJMc=",
   "Source": "GameZone",
   "BasePath": "_content/GameZone",
   "Mode": "Default",
@@ -53,25 +53,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Abdelhay projects\\GameZone\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GameZone.bundle.scp.css"
-    },
-    {
-      "Identity": "D:\\Abdelhay projects\\GameZone\\wwwroot\\assests\\images\\games\\62d81564-8205-4f56-bc73-7ab468cf2eab.ico",
-      "SourceId": "GameZone",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Abdelhay projects\\GameZone\\wwwroot\\",
-      "BasePath": "_content/GameZone",
-      "RelativePath": "assests/images/games/62d81564-8205-4f56-bc73-7ab468cf2eab.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assests\\images\\games\\62d81564-8205-4f56-bc73-7ab468cf2eab.ico"
     },
     {
       "Identity": "D:\\Abdelhay projects\\GameZone\\wwwroot\\assests\\images\\games\\ae26d1e3-4f95-48ca-917d-2726c8e6b634.jpg",
@@ -148,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Abdelhay projects\\GameZone\\wwwroot\\js\\gameform.js",
+      "SourceId": "GameZone",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Abdelhay projects\\GameZone\\wwwroot\\",
+      "BasePath": "_content/GameZone",
+      "RelativePath": "js/gameform.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\gameform.js"
     },
     {
       "Identity": "D:\\Abdelhay projects\\GameZone\\wwwroot\\js\\site.js",

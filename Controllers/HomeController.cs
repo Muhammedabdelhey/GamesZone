@@ -1,4 +1,5 @@
 using GameZone.Models;
+using GameZone.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,16 +7,17 @@ namespace GameZone.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IGamesService _gamesService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IGamesService gamesService)
         {
-            _logger = logger;
+            _gamesService = gamesService;
         }
 
-        public IActionResult Index()
+        public async  Task<IActionResult> Index()
         {
-            return View();
+            var games=await _gamesService.GetAllAsync();
+            return View(games);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

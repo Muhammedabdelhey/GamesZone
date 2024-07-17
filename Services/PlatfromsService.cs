@@ -10,7 +10,7 @@ namespace GameZone.Services
         }
         public async Task<IEnumerable<SelectListItem>> GetPlatformsForDropDownAsync()
         {
-            return await _context.platforms
+            return await _context.Platforms
                 .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
                 .OrderBy(c => c.Text)
                 .AsNoTracking()

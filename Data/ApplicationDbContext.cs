@@ -8,9 +8,9 @@ namespace GameZone.Data
         {
 
         }
-        public DbSet<Game> games { get; set; }
-        public DbSet<Category> categories { get; set; }
-        public DbSet<Platform> platforms { get; set; }
+        public DbSet<Game> Games { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Platform> Platforms { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
