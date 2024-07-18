@@ -37,10 +37,19 @@ namespace GameZone.Services
         public async Task<IEnumerable<Game>> GetAllAsync()
         {
             return await _context.Games
-                .AsNoTracking()
                 .Include(x => x.Category)
                 .Include(x => x.Platforms)
+                .AsNoTracking()
                 .ToListAsync();
+        }
+
+        public async Task<Game?> GetByIdAsync(int id)
+        {
+            return await _context.Games
+                .Include(x => x.Category)
+                .Include(x => x.Platforms)
+                .AsNoTracking()
+                .SingleOrDefaultAsync(g => g.Id == id);
         }
     }
 }

@@ -15,15 +15,13 @@ else
         @foreach (var game in Model)
         {
             <div class="col-lg-4 col-md-6">
-                <div class="card border-success mb-3" style="max-width : 20rem;">
+                <a class="card border-success mb-3 text-decoration-none" style="max-width :20rem;" asp-controller="Games" asp-action="Show" asp-route-id="@game.Id">
+                    <h5 class="card-header">@game.Name</h5>
                     <div class="card-body" style="background-image :url(@($"{ImageSettings.ImagesPath}/{game.Cover}"));
                     background-size:cover; background-position:center; height:400px">
-                        <div class="h-100">
-                            <span class="badge bg-secondary rounded-0">@game.Category.Name</span>
-                        </div>
                     </div>
-                    <div class="card-footer text-muted d-flex justify-content-between align-items-center">
-                        <h5>@game.Name</h5>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <span class="badge bg-success">@game.Category.Name</span>
                         <div>
                             @foreach (var platform in @game.Platforms)
                             {
@@ -31,7 +29,7 @@ else
                             }
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         }
     </div>

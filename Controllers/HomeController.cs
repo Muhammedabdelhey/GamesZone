@@ -14,9 +14,9 @@ namespace GameZone.Controllers
             _gamesService = gamesService;
         }
 
-        public async  Task<IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
-            var games=await _gamesService.GetAllAsync();
+            var games = await _gamesService.GetAllAsync();
             return View(games);
         }
 
