@@ -67,7 +67,7 @@
             game.Description = model.Description;
             game.CategoryId = model.CategoryId;
             game.GamePlatforms = model.SelectdPlatforms
-            .Select(p => new GamePlatform { PlatformId = p })
+            .Select(platformId => new GamePlatform { PlatformId = platformId })
             .ToList();
             _context.SaveChanges();
             return game;
