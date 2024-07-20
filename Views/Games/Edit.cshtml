@@ -1,12 +1,12 @@
-﻿@model CreateGameFormViewModel
+﻿@model EditGameViewModel
 @{
-    ViewData["Title"] = "Add Game";
+    ViewData["title"] = "Edit Game";
 }
 <h5 class="mt-3">
     <i class="bi bi-plus-circle-dotted"></i>
-    Add New Game
+    Edit Game
 </h5>
-<form asp-controller="Games" enctype="multipart/form-data">
+<form asp-controller="Games" method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
@@ -44,10 +44,10 @@
                 </small>
                 <span asp-validation-for="Cover" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-light text-black mt-4">Add Game</button>
+            <button type="submit" class="btn btn-light text-black mt-4">Update Game</button>
         </div>
         <div class="col-md-6 d-flex justify-content-center pt-4 overflow-hidden">
-            <img class="cover-preview d-none " alt="cover" />
+            <img class="cover-preview" alt="cover" src="@($"{ImageSettings.ImagesPath}/games/{Model.CoverName}")" />
         </div>
     </div>
 </form>

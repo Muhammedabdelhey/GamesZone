@@ -5,12 +5,8 @@
       "PackagePath": "staticwebassets\\GameZone.bundle.scp.css"
     },
     {
-      "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\assests\\images\\games\\4cffaa41-3e98-4fd0-a3fd-81fd9f4921ee.jpg",
-      "PackagePath": "staticwebassets\\assests\\images\\games\\4cffaa41-3e98-4fd0-a3fd-81fd9f4921ee.jpg"
-    },
-    {
-      "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\assests\\images\\games\\ae26d1e3-4f95-48ca-917d-2726c8e6b634.jpg",
-      "PackagePath": "staticwebassets\\assests\\images\\games\\ae26d1e3-4f95-48ca-917d-2726c8e6b634.jpg"
+      "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\assests\\images\\games\\f5cf2ef6-d03e-40d5-9283-91a0ec8f7f2a.jpg",
+      "PackagePath": "staticwebassets\\assests\\images\\games\\f5cf2ef6-d03e-40d5-9283-91a0ec8f7f2a.jpg"
     },
     {
       "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\css\\bootstrap.min.css",
@@ -25,8 +21,12 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\js\\gameform.js",
-      "PackagePath": "staticwebassets\\js\\gameform.js"
+      "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\js\\games-form.js",
+      "PackagePath": "staticwebassets\\js\\games-form.js"
+    },
+    {
+      "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\js\\games-index.js",
+      "PackagePath": "staticwebassets\\js\\games-index.js"
     },
     {
       "Id": "D:\\Abdelhay projects\\GameZone\\wwwroot\\js\\site.js",

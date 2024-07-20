@@ -7,14 +7,14 @@ namespace GameZone.Attributes
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
 
-            if (value is not IFormFile file)
+            var file = value as IFormFile;
+            if (file != null)
             {
-                return new ValidationResult("Invalid file type. Please upload a valid file.");
-            }
-            string extension = Path.GetExtension(file.FileName);
-            if (!ImageSettings.AllowedExtensions.Split(',').Contains(extension, StringComparer.OrdinalIgnoreCase))
-            {
-                return new ValidationResult($"Only the following extensions are allowed: {ImageSettings.AllowedExtensions}");
+                string extension = Path.GetExtension(file.FileName);
+                if (!ImageSettings.AllowedExtensions.Split(',').Contains(extension, StringComparer.OrdinalIgnoreCase))
+                {
+                    return new ValidationResult($"Only the following extensions are allowed: {ImageSettings.AllowedExtensions}");
+                }
             }
             return ValidationResult.Success;
         }

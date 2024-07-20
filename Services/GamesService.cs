@@ -1,6 +1,4 @@
-﻿using GameZone.Settings;
-
-namespace GameZone.Services
+﻿namespace GameZone.Services
 {
     public class GamesService : IGamesService
     {
@@ -12,14 +10,11 @@ namespace GameZone.Services
         {
             _context = context;
             _webHostEnvironment = webHostEnvironment;
-            _imagesPath = $"{_webHostEnvironment.WebRootPath}{ImageSettings.ImagesPath}";
+            _imagesPath = $"{_webHostEnvironment.WebRootPath}{ImageSettings.ImagesPath}/games";
         }
         public async Task CreateAsync(CreateGameFormViewModel model)
         {
-            var CoverName = $"{Guid.NewGuid()}{Path.GetExtension(model.Cover.FileName)}";
-            var path = Path.Combine(_imagesPath, CoverName);
-            using var stream = File.Create(path);
-            await model.Cover.CopyToAsync(stream);
+            var CoverName = await SaveImage(model.Cover);
             Game game = new()
             {
                 Name = model.Name,
@@ -50,6 +45,59 @@ namespace GameZone.Services
                 .Include(x => x.Platforms)
                 .AsNoTracking()
                 .SingleOrDefaultAsync(g => g.Id == id);
+        }
+
+        public async Task<Game?> UpdateAsync(EditGameViewModel model)
+        {
+            var game = await _context.Games
+                .Include(x => x.GamePlatforms)
+                .SingleOrDefaultAsync(p => p.Id == model.Id);
+            if (game is null)
+            {
+                return null;
+            }
+            var oldCover = game.Cover;
+            var hasNewCover = model.Cover != null;
+            if (hasNewCover)
+            {
+                DeleteImage(oldCover);
+                game.Cover = await SaveImage(model.Cover!);
+            }
+            game.Name = model.Name;
+            game.Description = model.Description;
+            game.CategoryId = model.CategoryId;
+            game.GamePlatforms = model.SelectdPlatforms
+            .Select(p => new GamePlatform { PlatformId = p })
+            .ToList();
+            _context.SaveChanges();
+            return game;
+        }
+        public async Task<bool> DeleteAsync(int id)
+        {
+            var game = await _context.Games
+                .SingleOrDefaultAsync(p => p.Id == id);
+            if (game is null)
+            {
+                return false;
+            }
+            _context.Remove(game);
+            DeleteImage(game.Cover);
+            _context.SaveChanges();
+            return true;
+        }
+        public async Task<string> SaveImage(IFormFile cover)
+        {
+            var CoverName = $"{Guid.NewGuid()}{Path.GetExtension(cover.FileName)}";
+            var path = Path.Combine(_imagesPath, CoverName);
+            using var stream = File.Create(path);
+            await cover.CopyToAsync(stream);
+            return CoverName;
+        }
+
+        public void DeleteImage(string cover)
+        {
+            var coverName = Path.Combine(_imagesPath, cover);
+            File.Delete(coverName);
         }
     }
 }

@@ -46,6 +46,7 @@ namespace GameZone.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet]
         public async Task<IActionResult> Show(int id)
         {
             var game = await _gamesService.GetByIdAsync(id);
@@ -54,6 +55,50 @@ namespace GameZone.Controllers
                 return NotFound();
             }
             return View(game);
+        }
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var game = await _gamesService.GetByIdAsync(id);
+            if (game is null)
+            {
+                return NotFound();
+            }
+            EditGameViewModel viewModel = new()
+            {
+                Id = id,
+                Name = game.Name,
+                Description = game.Description,
+                CategoryId = game.CategoryId,
+                CoverName = game.Cover,
+                SelectdPlatforms = game.Platforms.Select(p => p.Id).ToList(),
+                Categories = await _categoryService.GetCategoriesForDropDownAsync(),
+                Platforms = await _platformService.GetPlatformsForDropDownAsync(),
+            };
+            return View(viewModel);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(EditGameViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                model.Categories = await _categoryService.GetCategoriesForDropDownAsync();
+                model.Platforms = await _platformService.GetPlatformsForDropDownAsync();
+                return View(model);
+            };
+            var game = await _gamesService.UpdateAsync(model);
+            if (game is null)
+            {
+                return BadRequest();
+            }
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var isDeleted = await _gamesService.DeleteAsync(id);
+            return isDeleted ? Ok() : BadRequest();
         }
     }
 }

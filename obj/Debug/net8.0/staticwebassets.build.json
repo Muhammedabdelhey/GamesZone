@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "89nBNDyXgQCeFGOkkDqQ2olliScPXTk/cGJ981lURr8=",
+  "Hash": "mfwZ7I9uwkhSkMUIEnSD5nnvAFqeVeCJkNj+dUrw3Zc=",
   "Source": "GameZone",
   "BasePath": "_content/GameZone",
   "Mode": "Default",
@@ -55,12 +55,12 @@
       "OriginalItemSpec": "D:\\Abdelhay projects\\GameZone\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GameZone.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Abdelhay projects\\GameZone\\wwwroot\\assests\\images\\games\\4cffaa41-3e98-4fd0-a3fd-81fd9f4921ee.jpg",
+      "Identity": "D:\\Abdelhay projects\\GameZone\\wwwroot\\assests\\images\\games\\f5cf2ef6-d03e-40d5-9283-91a0ec8f7f2a.jpg",
       "SourceId": "GameZone",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Abdelhay projects\\GameZone\\wwwroot\\",
       "BasePath": "_content/GameZone",
-      "RelativePath": "assests/images/games/4cffaa41-3e98-4fd0-a3fd-81fd9f4921ee.jpg",
+      "RelativePath": "assests/images/games/f5cf2ef6-d03e-40d5-9283-91a0ec8f7f2a.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,26 +71,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assests\\images\\games\\4cffaa41-3e98-4fd0-a3fd-81fd9f4921ee.jpg"
-    },
-    {
-      "Identity": "D:\\Abdelhay projects\\GameZone\\wwwroot\\assests\\images\\games\\ae26d1e3-4f95-48ca-917d-2726c8e6b634.jpg",
-      "SourceId": "GameZone",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Abdelhay projects\\GameZone\\wwwroot\\",
-      "BasePath": "_content/GameZone",
-      "RelativePath": "assests/images/games/ae26d1e3-4f95-48ca-917d-2726c8e6b634.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assests\\images\\games\\ae26d1e3-4f95-48ca-917d-2726c8e6b634.jpg"
+      "OriginalItemSpec": "wwwroot\\assests\\images\\games\\f5cf2ef6-d03e-40d5-9283-91a0ec8f7f2a.jpg"
     },
     {
       "Identity": "D:\\Abdelhay projects\\GameZone\\wwwroot\\css\\bootstrap.min.css",
@@ -150,12 +131,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\Abdelhay projects\\GameZone\\wwwroot\\js\\gameform.js",
+      "Identity": "D:\\Abdelhay projects\\GameZone\\wwwroot\\js\\games-form.js",
       "SourceId": "GameZone",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Abdelhay projects\\GameZone\\wwwroot\\",
       "BasePath": "_content/GameZone",
-      "RelativePath": "js/gameform.js",
+      "RelativePath": "js/games-form.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -166,7 +147,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\gameform.js"
+      "OriginalItemSpec": "wwwroot\\js\\games-form.js"
+    },
+    {
+      "Identity": "D:\\Abdelhay projects\\GameZone\\wwwroot\\js\\games-index.js",
+      "SourceId": "GameZone",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Abdelhay projects\\GameZone\\wwwroot\\",
+      "BasePath": "_content/GameZone",
+      "RelativePath": "js/games-index.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\games-index.js"
     },
     {
       "Identity": "D:\\Abdelhay projects\\GameZone\\wwwroot\\js\\site.js",

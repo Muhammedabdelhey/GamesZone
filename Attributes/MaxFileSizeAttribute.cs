@@ -6,13 +6,13 @@ namespace GameZone.Attributes
     {
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
-            if (value is not IFormFile file)
+            var file = value as IFormFile;
+            if (file != null)
             {
-                return new ValidationResult("Invalid file type. Please upload a valid file.");
-            }
-            if (file.Length > ImageSettings.MaxSizeInMBs * 1024 * 1024)
-            {
-                return new ValidationResult($"Maximum Allowed Size is {ImageSettings.MaxSizeInMBs} MBs");
+                if (file.Length > ImageSettings.MaxSizeInMBs * 1024 * 1024)
+                {
+                    return new ValidationResult($"Maximum Allowed Size is {ImageSettings.MaxSizeInMBs} MBs");
+                }
             }
             return ValidationResult.Success;
         }
