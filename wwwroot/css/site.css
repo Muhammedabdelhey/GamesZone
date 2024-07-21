@@ -46,3 +46,16 @@ body {
     transform: translate(-50%, -50%);
     padding: 5px;
 }
+
+.select2-container--default .select2-selection--single {
+    background-color: #30115e;
+}
+
+
+.select2-container--default .select2-selection--multiple {
+    background-color: #30115e;
+}
+
+.select2-container--default .select2-dropdown {
+    background-color: #30115e; /* Replace with your desired RGB values */
+}

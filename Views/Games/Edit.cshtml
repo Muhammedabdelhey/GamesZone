@@ -16,15 +16,17 @@
             </div>
             <div class="form-group">
                 <label asp-for="CategoryId" class="form-label mt-2"></label>
-                <select class="form-select" asp-for="CategoryId" asp-items="Model.Categories">
-                    <option value="">Select Category</option>
+                <select class="form-select" asp-for="CategoryId" asp-items="Model.Categories"
+                        data-placeholder="Select Category">
+                    <option value=""></option>
                 </select>
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="SelectdPlatforms" class="form-label mt-2"></label>
-                <select class="form-select" asp-for="SelectdPlatforms" asp-items="Model.Platforms">
-                    <option>Select Platforms</option>
+                <select class="form-select" asp-for="SelectdPlatforms"
+                        asp-items="Model.Platforms" data-placeholder="Select Platforms">
+                    <option value=""></option>
                 </select>
                 <span asp-validation-for="SelectdPlatforms" class="text-danger"></span>
             </div>
@@ -36,7 +38,7 @@
             <div class="form-group">
                 <label asp-for="Cover" class="form-label mt-2"></label>
                 <input type="file" class="form-control" asp-for="Cover"
-                       data-rule-extension="@ImageSettings.AllowedExtensions.Replace(".",string.Empty)"
+                       data-rule-extension="@ImageSettings.AllowedExtensions.Replace(".", string.Empty)"
                        data-msg-extension="Not Allowed Extension">
                 <small class="form-text text-muted d-block">
                     Only @ImageSettings.AllowedExtensions files are allowed with max size
