@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.js-delete').on('click', function () {
+    $('.js-delete-game').on('click', function () {
         var btn = $(this);
         Swal.fire({
             title: "Are you sure?",

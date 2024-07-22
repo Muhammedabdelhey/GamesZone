@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "Add Category";
+}
+<h1 class="d-flex align-items-center">All Categories</h1>
+<a class="btn btn-primary btn-lg mt-3" asp-action="Create" asp-controller="Categories">
+    <i class="bi bi-plus-circle-dotted"></i>
+    Add Category
+</a>
+@if (!Model.Any())
+{
+    <div class="alert alert-warning mt-4">
+        <h4>No Categoreis yet</h4>
+    </div>
+}
+<a class=""></a>
+<table class="table table-bordered table-Default mt-4">
+    <tbody>
+        @foreach (var category in Model)
+        {
+            <tr class="border-3 border-info">
+                <td>
+                    <div class="d-flex align-items-center">
+                        <h5 class="mb-0">@category.Name</h5>
+                    </div>
+                </td>
+                <td class="align-content-end">
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn-info rounded rounded-3 me-2" asp-action="Edit" asp-route-id="@category.Id">
+                            <i class="bi bi-pencil-fill"></i>
+                        </a>
+                        <a href="javascript:;" class="btn btn-danger rounded rounded-3 js-delete-category" data-id="@category.Id">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

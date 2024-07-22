@@ -26,7 +26,7 @@
                 .ToList(),
             };
             _context.Games.Add(game);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<Game>> GetAllAsync()
@@ -69,7 +69,7 @@
             game.GamePlatforms = model.SelectdPlatforms
             .Select(platformId => new GamePlatform { PlatformId = platformId })
             .ToList();
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return game;
         }
         public async Task<bool> DeleteAsync(int id)
@@ -82,7 +82,7 @@
             }
             _context.Remove(game);
             DeleteImage(game.Cover);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return true;
         }
         public async Task<string> SaveImage(IFormFile cover)

@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Games";
 }
+<h1 class="d-flex align-items-center">All Games</h1>
 <a class="btn btn-primary btn-lg mt-3" asp-action="Create" asp-controller="Games">
     <i class="bi bi-plus-circle-dotted"></i>
     Add Game
@@ -20,7 +21,7 @@ else
             <tbody>
                 @foreach (var game in Model)
                 {
-                    <tr class="border-3 border-Secondary">
+                    <tr class="border-3 border-info">
                         <td>
                             <div class="d-flex align-items-center">
                                 <div class="pe-4">
@@ -37,7 +38,7 @@ else
                                 <a class="btn btn-info rounded rounded-3 me-2" asp-action="Edit" asp-route-id="@game.Id">
                                     <i class="bi bi-pencil-fill"></i>
                                 </a>
-                                <a href="javascript:;" class="btn btn-danger rounded rounded-3 js-delete" data-id="@game.Id">
+                                <a href="javascript:;" class="btn btn-danger rounded rounded-3 js-delete-game" data-id="@game.Id">
                                     <i class="bi bi-trash3"></i>
                                 </a>
                             </div>
